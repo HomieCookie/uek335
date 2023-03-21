@@ -14,7 +14,6 @@ export default function TimePicker() {
   const onConfirm = React.useCallback(
     (params: any) => {
       setVisible(false);
-      console.log(params);
     },
     [setVisible]
   );
@@ -33,9 +32,10 @@ export default function TimePicker() {
         <TimePickerModal
           visible={visible}
           onDismiss={onDismiss}
-          hours={12}
-          minutes={14}
+          hours={24}
+          minutes={0}
           onConfirm={onConfirm}
+          use24HourClock={true}
         />
       </View>
     </SafeAreaProvider>
