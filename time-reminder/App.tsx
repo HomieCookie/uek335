@@ -1,25 +1,21 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import DatePicker from "./components/DatePicker";
-import TimePicker from "./components/TimePicker";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Provider } from "react-native-paper";
+import HomePage from "./pages/HomePage";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <TimePicker />
-      <DatePicker />
-    </View>
+    <>
+      <Provider>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={HomePage} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#48233C",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  button: {
-    backgroundColor: "#CAC4D0",
-  },
-});
