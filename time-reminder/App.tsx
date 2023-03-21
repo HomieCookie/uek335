@@ -1,19 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import DatePicker from './components/DatePicker';
 
 export default function App() {
 
-  const [count, setCount] = useState(0);
-
-  const updateCount = () => {
-    setCount(count + 1);
-  }
-
   return (
     <View style={styles.container}>
-      <Button onTouchStart={updateCount}><Text>{count}</Text></Button>
+      <DatePicker />
     </View>
   );
 }
