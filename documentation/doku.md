@@ -19,7 +19,19 @@
 
 ### **1.1** Anforderungen
 
-Unsere Aufgabe für dieses Projekt ist es, eine Mobile Applikation zur Erinnerung der Fertigmeldung zu erstellen. In der App soll der Nutzer den gewünschten Tag für die Erinnerung einstellen können. Zusätzlich soll auch die gewünschte Zeit definert werden können. Wenn all dies definiert wurde, kann der Nutzer definieren, wie oft sich diese Message wiederhohlen soll.
+Unsere Aufgabe für dieses Projekt ist es, eine Mobile Applikation zur Erinnerung der Fertigmeldung zu erstellen.
+
+#### Funktionale Anforderungen
+
+- Als ein Nutzer kann ich ein den Tag, an der die Nachricht kommt, angeben
+- Als ein Nutzer kann ich die Zeit angeben, an welcher die Nachricht kommt
+- Als ein User kann ich einstellen, wie oft dich die Nachricht wiederhohlt
+
+#### Nicht-funktionale Anforderungen
+
+- Als ein User finde ich das UI ansprechend
+- Als ein User kann ich mich auf den Seiten zurechfinden
+- Als Nutzer bekomme ich die Nachricht spätenstens nach 59 Sekunden
 
 ### **1.2** Ziele
 
