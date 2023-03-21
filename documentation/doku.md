@@ -9,6 +9,8 @@
 
 - ### [**2.0 Mockups und Design**](#20-mockups-und-design-1)
 
+  - #### [**2.1 Infrastruktur**](#21-infrastruktur-1)
+
 - ### [**3.0 Umsetzung des projektes**](#30-umsetzung-des-projektes-1)
 
 - ### [**4.0 Testing**](#40-testing-1)
@@ -48,7 +50,7 @@ Unsere Aufgabe für dieses Projekt ist es, eine Mobile Applikation zur Erinnerun
 
 Die unten dargestellte Seite, stellt das Muckup unserer Home Page dar. Auf dieser Seite wird als erstes ein kleiner Willkommenstext dargestellt. Weiter unten ist zu sehen, wann die nächste Erinnerung kommt. Falls der Nutzer nicht mehr zufrienden ist kann er auf den dargestellten Kasten klicken. Dann wird er auf die [nächste Seite](#selecting-page) weitergeleitet.
 
-![Home Page](homepage.png)
+![Home Page](./select_page.png)
 
 ### Selecting Page
 
@@ -64,8 +66,14 @@ Die Message sollte ungefähr so aussehen, wie im Mochup, welches unten dargestel
 
 Link für Figma: https://www.figma.com/file/K5UEwmhLbN4sTiERp3Dpyk/Mockup-Time-reminder?node-id=0%3A1&t=BZooCcnTby7qsY0U-1
 
+### **2.1** Infrastruktur
+
+In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurde nicht von uns getroffen, sondern war vorgschrieben. Jedoch haben wir uns als Components Library für React Native Paper entschieden. Diese Library hat alle wichtigen Komponente, welche wir für dieses Projekt brauchen. Die Mockups wurden mit Figma erstellt, da wir schon etwas erfahrung mit Figma hattern.
+
 ## **3.0** Umsetzung des projektes
 
 ---
 
 ## **4.0** Testing
+
+---
