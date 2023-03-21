@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export default function App() {
+
+  const [count, setCount] = useState(0);
+
+  const updateCount = () => {
+    setCount(count + 1);
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Button onTouchStart={updateCount}><Text>{count}</Text></Button>
     </View>
   );
 }

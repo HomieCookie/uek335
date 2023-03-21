@@ -54,7 +54,7 @@ Die unten dargestellte Seite, stellt das Muckup unserer Home Page dar. Auf diese
 
 Die Selecting Page ist die Seite, auf der das Datum und die Uhrzeit der Erinnerung angepasst und definiert werden kann. Zusätzlich kann ausgewählt werden, wieviele Monate in Folge die Erinnerung kommt.
 
-![Pick Page](./select_page.png)
+![Pick Page](./datetimepickpage.png)
 
 ### Message
 
