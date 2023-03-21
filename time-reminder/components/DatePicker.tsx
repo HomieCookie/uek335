@@ -1,8 +1,7 @@
 import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 import { DatePickerModal, de, registerTranslation } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { View } from "react-native";
-import { Button } from "react-native-paper";
 
 registerTranslation('de', de)
 
@@ -23,12 +22,14 @@ export default function DatePicker() {
         [setDate]
     );
 
+    const selectedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+
     return (
         <SafeAreaProvider>
             <View>
-                <Button onPress={() => setOpen(true)} uppercase={false} mode="outlined">
-                    Pick single date
-                </Button>
+                <TouchableOpacity onPress={() => setOpen(true)} style={{ marginTop: 20 }}>
+                    <Text>{selectedDate}</Text>
+                </TouchableOpacity>
                 <DatePickerModal
                     locale="de"
                     mode="single"
