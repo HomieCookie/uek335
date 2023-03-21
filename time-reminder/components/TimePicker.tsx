@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import { TimePickerModal } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -23,6 +23,7 @@ export default function TimePicker() {
     <SafeAreaProvider>
       <View style={{ justifyContent: "center", flex: 1, alignItems: "center" }}>
         <Button
+          style={styles.button}
           onPress={() => setVisible(true)}
           uppercase={false}
           mode="outlined"
@@ -40,3 +41,13 @@ export default function TimePicker() {
     </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  component: {
+    backgroundColor: "#CAC4D0",
+  },
+  button: {
+    backgroundColor: "#CAC4D0",
+    borderColor: "",
+  },
+});
