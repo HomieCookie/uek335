@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { Text, View, Button, Platform } from "react-native";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
+import StorageService from "../services/StorageService";
+import React from "react";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -13,18 +15,24 @@ Notifications.setNotificationHandler({
 
 export default function Notification() {
   //   const [times, SetTime] = useState<any>();
-  //   const [dates, SetDates] = useState<any>();
+  const [dates, SetDates] = React.useState(new Date());
 
   useEffect(() => {}, []);
 
   function checkIfNodificationShouldSend() {
+    StorageService.get("date").then((date) => {
+      if (date) {
+        SetDates(new Date(date));
+      }
+    });
     let date = new Date();
     let time = "hallo";
+
     if (time == "hallo") {
       schedulePushNotification();
-      console.log(date);
+      console.log(dates);
     } else {
-      console.log("hoii", time);
+      console.log("hoii", date, dates);
     }
   }
 
