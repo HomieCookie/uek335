@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DatePickerModal, de, registerTranslation } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -9,6 +9,8 @@ export default function DatePicker() {
 
     const [date, setDate] = React.useState(new Date());
     const [open, setOpen] = React.useState(false);
+
+    const weekdays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 
     const onDismissSingle = React.useCallback(() => {
         setOpen(false);
@@ -22,13 +24,14 @@ export default function DatePicker() {
         [setDate]
     );
 
-    const selectedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    const selectedDate = `${date.getDate().toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${(date.getMonth() + 1).toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${date.getFullYear()}`
 
     return (
-        <SafeAreaProvider>
+        <SafeAreaProvider style={{ maxHeight: 100 }}>
             <View>
-                <TouchableOpacity onPress={() => setOpen(true)} style={{ marginTop: 20 }}>
-                    <Text>{selectedDate}</Text>
+                <TouchableOpacity onPress={() => setOpen(true)} style={styles.container}>
+                    <Text style={styles.dateText}>{selectedDate}</Text>
+                    <Text style={styles.dayText}>{weekdays[date.getDay()]}</Text>
                 </TouchableOpacity>
                 <DatePickerModal
                     locale="de"
@@ -42,3 +45,17 @@ export default function DatePicker() {
         </SafeAreaProvider>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    dateText: {
+        fontSize: 35,
+    },
+    dayText: {
+        fontSize: 20,
+    },
+})
