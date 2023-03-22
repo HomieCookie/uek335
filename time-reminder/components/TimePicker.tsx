@@ -38,6 +38,12 @@ export default function TimePicker() {
      * This function is triggered when the selected values are confirmed and will set the selected values
      */
     (params: any) => {
+      // if hours or minutes are not a number, the modal will be closed and the values will not be set
+      if (isNaN(params.hours) || isNaN(params.minutes)) {
+        setVisible(false);
+        return;
+      }
+
       setVisible(false);
       setHours(params.hours);
       setMinutes(params.minutes);
