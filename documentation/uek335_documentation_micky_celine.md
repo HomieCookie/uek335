@@ -73,4 +73,6 @@ In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurd
 
 ## **4.0** Testing
 
+![Testing](./testing.png)
+
 ---
