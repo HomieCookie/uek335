@@ -51,15 +51,9 @@ Die User Stories sind fertig wenn:
 
 ### Home page
 
-Die unten dargestellte Seite, stellt das Muckup unserer Home Page dar. Auf dieser Seite wird als erstes ein kleiner Willkommenstext dargestellt. Weiter unten ist zu sehen, wann die nächste Erinnerung kommt. Falls der Nutzer nicht mehr zufrienden ist kann er auf den dargestellten Kasten klicken. Dann wird er auf die [nächste Seite](#selecting-page) weitergeleitet.
+Die unten dargestellte Seite, stellt das Mockup unserer Home Page dar. Auf dieser Seite wird als erstes ein kleiner Willkommenstext dargestellt. Weiter unten ist zu sehen, wann die nächste Erinnerung kommt. Falls der Nutzer nicht mehr zufrienden ist, kann er das Datum und die Uhrzeit der Erinnerung ändern.
 
-![Home Page](./select_page.png)
-
-### Selecting Page
-
-Die Selecting Page ist die Seite, auf der das Datum und die Uhrzeit der Erinnerung angepasst und definiert werden kann. Zusätzlich kann ausgewählt werden, wieviele Monate in Folge die Erinnerung kommt.
-
-![Pick Page](./datetimepickpage.png)
+![Home Page](./homepage.png)
 
 ### Message
 
@@ -78,5 +72,7 @@ In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurd
 ---
 
 ## **4.0** Testing
+
+![Testing](./testing.png)
 
 ---

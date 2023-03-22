@@ -3,6 +3,9 @@ import { StyleSheet, View } from "react-native";
 import DropDown from "react-native-paper-dropdown";
 import StorageService from "../services/StorageService";
 
+/**
+ *  It is a dropdown component that allows to select how often the notification should be repeated
+ * */
 export default function Dropdown() {
   const [showDropDown, setShowDropDown] = useState(false);
   const [repeat, setRepeat] = useState(1);
