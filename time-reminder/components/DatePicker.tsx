@@ -6,6 +6,11 @@ import StorageService from "../services/StorageService";
 
 registerTranslation('de', de)
 
+/**
+ * DatePicker component for picking a date.
+ * 
+ * @returns {JSX.Element}
+ */
 export default function DatePicker() {
 
     const [date, setDate] = React.useState(new Date());
@@ -31,7 +36,6 @@ export default function DatePicker() {
         StorageService.set('date', date.toString());
     }, [date])
 
-
     let offset = 0;
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -43,6 +47,13 @@ export default function DatePicker() {
         setOpen(false);
     }, [setOpen]);
 
+    /**
+     * Callback for date change in single mode.
+     * 
+     * @param {Date} params.date - The selected date.
+     * 
+     * @returns {void}
+     */
     const onConfirmSingle = React.useCallback(
         (params: any) => {
             setOpen(false);
@@ -51,6 +62,9 @@ export default function DatePicker() {
         [setDate]
     );
 
+    /**
+    * The formatted selected date string with day of the week.
+    */
     const selectedDate = `${date.getDate().toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${month.toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${year}`
 
     return (
