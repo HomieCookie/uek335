@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
         fontSize: 35,
     },
     dayText: {
-        fontSize: 20,
+        fontSize: 18,
+        marginBottom: 10,
     },
 })
