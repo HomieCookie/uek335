@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import DropDown from "react-native-paper-dropdown";
+import StorageService from "../services/StorageService";
 
 export default function Dropdown() {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [repeat, setRepeat] = useState("");
+  const [repeat, setRepeat] = useState(1);
+
+  useEffect(() => {
+    StorageService.get("repeat").then((repeat) => {
+      if (repeat) {
+        setRepeat(Number(repeat));
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    StorageService.set("repeat", repeat.toString());
+  }, [repeat]);
+
   const repeatList = [
     {
       label: "one",
