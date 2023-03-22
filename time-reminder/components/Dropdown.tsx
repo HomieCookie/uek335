@@ -42,7 +42,7 @@ export default function Dropdown() {
 
 const styles = StyleSheet.create({
   component: {
-    width: "30%",
+    minWidth: 50,
     alignItems: "center",
     justifyContent: "center",
   },

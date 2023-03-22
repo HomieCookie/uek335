@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 import DatePicker from "../components/DatePicker";
+import Dropdown from "../components/Dropdown";
 import TimePicker from "../components/TimePicker";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
             <View style={styles.editContainer}>
                 <DatePicker />
                 <TimePicker />
+                <Dropdown />
             </View>
         </View>
     );
@@ -32,6 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         maxHeight: 250,
         padding: 60,
+        paddingBottom: 20,
         borderRadius: 20,
     },
     welcomeText: {

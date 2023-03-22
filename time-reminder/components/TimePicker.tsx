@@ -28,7 +28,7 @@ export default function TimePicker() {
   })}`
 
   return (
-    <SafeAreaProvider style={{ maxHeight: 50 }}>
+    <SafeAreaProvider style={{ margin: 10 }}>
       <View style={{ justifyContent: "center", flex: 1, alignItems: "center" }}>
         <TouchableOpacity onPress={() => setVisible(true)}>
           <Text style={styles.text}>{selectedTime}</Text>

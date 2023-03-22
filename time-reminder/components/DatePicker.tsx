@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DatePickerModal, de, registerTranslation } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -9,6 +9,11 @@ export default function DatePicker() {
 
     const [date, setDate] = React.useState(new Date());
     const [open, setOpen] = React.useState(false);
+
+    let offset = 0;
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let result = null;
 
     const weekdays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 
@@ -24,7 +29,19 @@ export default function DatePicker() {
         [setDate]
     );
 
-    const selectedDate = `${date.getDate().toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${(date.getMonth() + 1).toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${date.getFullYear()}`
+
+
+    useEffect(() => {
+        do {
+            result = new Date(year, month, offset);
+
+            offset--;
+        } while (result.getDay() == 0 || result.getDay() == 6);
+
+        setDate(result);
+    }, [])
+
+    const selectedDate = `${date.getDate().toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${month.toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${year}`
 
     return (
         <SafeAreaProvider style={{ maxHeight: 100 }}>
