@@ -28,6 +28,7 @@ Unsere Aufgabe für dieses Projekt ist es, eine Mobile Applikation zur Erinnerun
 - Als ein Nutzer kann ich ein den Tag, an der die Nachricht kommt, angeben
 - Als ein Nutzer kann ich die Zeit angeben, an welcher die Nachricht kommt
 - Als ein User kann ich einstellen, wie oft dich die Nachricht wiederhohlt
+- Wenn ich als Nutzer kein Tag angegeben habe, bekomme ich die Erinnerung am letzten Arbeitstag im Monat
 
 #### Nicht-funktionale Anforderungen
 
@@ -37,12 +38,14 @@ Unsere Aufgabe für dieses Projekt ist es, eine Mobile Applikation zur Erinnerun
 
 ### **1.2** Ziele
 
-- Der Nutzer kann einstellen, an welchem Tag er die Erinnerung erhält
-- Falls kein Tag definiert wurde, wird automatisch der letzte Tag in dem Monat genommen
-- Der Nutzer kann eine bestimmte Zeit auswählen
-- Der Nutzer bekommt eine Push-Benachrichtung am definerten Tag
-- Es kann eine Anzahl von Wiederholungen ausgewählt werden
-- Die Applikation wurde getestet
+Die User Stories sind fertig wenn:
+
+- Der Nutzer einen bestimmten Tag für die Nachricht auswählen kann
+- Der Nutzer die Zeit der Nachricht bestimmen kann
+- Der Nutzer die Wiederhohlungen definieren kann
+- Die Steuerelemente an den richtigen Stellen verwendet wurden
+- Der Nutzer die Nachricht innerhalb von 59 Sekunden nach dem definierten Datum und Zeitpunkt erhält
+- Als Standart Tag der Letzte Arbeitstag im Monat genommen wird
 
 ## **2.0** Mockups und Design
 
