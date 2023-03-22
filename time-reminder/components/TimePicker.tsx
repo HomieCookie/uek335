@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { TimePickerModal } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import StorageService from "../services/StorageService";
 
 export default function TimePicker() {
   const [visible, setVisible] = React.useState(false);
   const [hours, setHours] = React.useState(1);
   const [minutes, setMinutes] = React.useState(0);
+
+  useEffect(() => {
+    StorageService.get('hour').then((hour) => {
+      if (hour) {
+        setHours(Number(hour));
+      }
+    })
+    StorageService.get('minute').then((minute) => {
+      if (minute) {
+        setMinutes(Number(minute));
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    StorageService.set('hour', hours.toString());
+    StorageService.set('minute', minutes.toString());
+  }, [hours, minutes])
 
   function onDismiss() {
     setVisible(false);
