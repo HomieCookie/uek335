@@ -1,6 +1,6 @@
-import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
 import { Provider } from "react-native-paper";
 import HomePage from "./pages/HomePage";
 import Notification from "./components/PushNodification";

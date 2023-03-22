@@ -1,3 +1,4 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Button, Text } from "react-native-paper";
 import { StyleSheet, View } from "react-native";
@@ -9,21 +10,21 @@ import Notification from "../components/PushNodification";
 
 export default function App() {
   const navigation = useNavigation<any>();
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.welcomeContainer}>
-        <Text style={styles.welcomeText}>Welcome!</Text>
-        <Text>Erinnerung Fertigmeldung</Text>
-      </View>
-      <View style={styles.editContainer}>
-        <DatePicker />
-        <TimePicker />
-        <Dropdown />
-        <Notification />
-      </View>
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <StatusBar style="light" />
+            <View style={styles.welcomeContainer}>
+                <Text style={styles.welcomeText}>Welcome!</Text>
+                <Text>Erinnerung Fertigmeldung</Text>
+            </View>
+            <View style={styles.editContainer}>
+                <DatePicker />
+                <TimePicker />
+                <Dropdown />
+                <Notification/>
+            </View>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DatePickerModal, de, registerTranslation } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import StorageService from "../services/StorageService";
 
 registerTranslation('de', de)
 
@@ -9,6 +10,27 @@ export default function DatePicker() {
 
     const [date, setDate] = React.useState(new Date());
     const [open, setOpen] = React.useState(false);
+
+    useEffect(() => {
+        StorageService.get('date').then((date) => {
+            if (date) {
+                setDate(new Date(date));
+            } else {
+                do {
+                    result = new Date(year, month, offset);
+
+                    offset--;
+                } while (result.getDay() == 0 || result.getDay() == 6);
+
+                setDate(result);
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        StorageService.set('date', date.toString());
+    }, [date])
+
 
     let offset = 0;
     let year = date.getFullYear();
@@ -28,18 +50,6 @@ export default function DatePicker() {
         },
         [setDate]
     );
-
-
-
-    useEffect(() => {
-        do {
-            result = new Date(year, month, offset);
-
-            offset--;
-        } while (result.getDay() == 0 || result.getDay() == 6);
-
-        setDate(result);
-    }, [])
 
     const selectedDate = `${date.getDate().toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${month.toLocaleString('de-CH', { minimumIntegerDigits: 2 })}.${year}`
 
