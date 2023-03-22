@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
 import DropDown from "react-native-paper-dropdown";
 
 export default function Dropdown() {
@@ -6,33 +7,43 @@ export default function Dropdown() {
   const [repeat, setRepeat] = useState("");
   const repeatList = [
     {
-      label: "once",
+      label: "one",
       value: 1,
     },
     {
-      label: "twice",
+      label: "two",
       value: 2,
     },
     {
-      label: "three times",
+      label: "three",
       value: 3,
     },
     {
-      label: "four times",
+      label: "four",
       value: 4,
     },
   ];
 
   return (
-    <DropDown
-      label={"Repeat"}
-      mode={"outlined"}
-      visible={showDropDown}
-      showDropDown={() => setShowDropDown(true)}
-      onDismiss={() => setShowDropDown(false)}
-      value={repeat}
-      setValue={setRepeat}
-      list={repeatList}
-    />
+    <View style={styles.component}>
+      <DropDown
+        label={"Repeat"}
+        mode={"outlined"}
+        visible={showDropDown}
+        showDropDown={() => setShowDropDown(true)}
+        onDismiss={() => setShowDropDown(false)}
+        value={repeat}
+        setValue={setRepeat}
+        list={repeatList}
+      />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  component: {
+    width: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
