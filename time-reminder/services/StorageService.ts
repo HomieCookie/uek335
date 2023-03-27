@@ -4,7 +4,7 @@ const set = async (key: string, value: string) => {
     try {
         await AsyncStorage.setItem(key, value);
     } catch (e) {
-        throw new Error("Error");
+        throw new Error("Could not save data");
     }
 };
 
@@ -15,7 +15,7 @@ const get = async (key: string) => {
             return value;
         }
     } catch (e) {
-        throw new Error("Error");
+        throw new Error("Could not get data");
 
     }
 };
