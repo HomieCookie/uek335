@@ -55,7 +55,17 @@ Die unten dargestellte Seite, stellt das Mockup unserer Home Page dar. Auf diese
 
 ![Home Page](./homepage.png)
 
-Falls das Datum oder die Uhrzeit geändert werden soll, kann das mit einem einfachen Klick gemacht werden. Mit einem Klick auf das Datum erscheint ein Popup eines Kalenders. Das gleiche gilt für die Uhrzeit. Wir entschieden uns dazu, für die Komponenten kein Mockup zu erstellen, da wir nicht viel am Design beitragen.
+Falls das Datum oder die Uhrzeit geändert werden soll, kann das mit einem einfachen Klick gemacht werden. Mit einem Klick auf das Datum erscheint ein [Popup eines Kalenders.](#datepicker) Das gleiche gilt für die [Uhrzeit](#timepicker).
+
+### Timepicker
+
+Für den Timepicker nutzen wir die Komponente die uns die Library Ract Native Paper bereits bereitstellt. Sobald auf OK gedrückt wird, speichert sich die neue Zeit.  
+![Timepicker](timepicker.png)
+
+### Datepicker
+
+Auch für den Datepicker haben wir eine React Native Paper Komponente genommen. Sie funktioniert gleich wie der Timepicker. Mit anderen Worten, nach dem Speichern wird auch hier das neue Datum auf der [Homepage](#home-page) angezeigt.
+![Datepicker](./datepicker.png)
 
 Link für Figma: https://www.figma.com/file/K5UEwmhLbN4sTiERp3Dpyk/Mockup-Time-reminder?node-id=0%3A1&t=BZooCcnTby7qsY0U-1
 
@@ -88,8 +98,6 @@ Da eine gute Code Dokumentation verlangt wird, wird user Code mit TSDocs komment
 Testart: Whitebox testing
 
 Testen auf: Android 12
-
-
 
 ![Testing](./testing.png)
 
