@@ -17,7 +17,21 @@ export default function Notification() {
   //   const [times, SetTime] = useState<any>();
   const [dates, SetDates] = React.useState(new Date());
 
-  useEffect(() => {}, []);
+  const getCurrentDate = () => {
+    var date = new Date().getDate();
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+
+    return date + "-" + month + "-" + year; //format: d-m-y;
+  };
+
+  const getSetDate = () => {
+    var date = dates.getDate();
+    var month = dates.getMonth() + 1;
+    var year = dates.getFullYear();
+
+    return date + "-" + month + "-" + year; //format: d-m-y;
+  };
 
   function checkIfNodificationShouldSend() {
     StorageService.get("date").then((date) => {
@@ -25,14 +39,12 @@ export default function Notification() {
         SetDates(new Date(date));
       }
     });
-    let date = new Date();
-    let time = "hallo";
 
-    if (time == "hallo") {
+    if (getCurrentDate() == getSetDate()) {
       schedulePushNotification();
       console.log(dates);
     } else {
-      console.log("hoii", date, dates);
+      console.log("hoii", getCurrentDate(), getSetDate());
     }
   }
 
@@ -55,6 +67,6 @@ async function schedulePushNotification() {
       body: "hoiiiiiiiii",
       data: { data: "goes here" },
     },
-    trigger: { seconds: 1 },
+    trigger: { seconds: 1000 },
   });
 }
