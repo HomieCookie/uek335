@@ -3,9 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { TimePickerModal } from "react-native-paper-dates";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import StorageService from "../services/StorageService";
-/**
- * It is a timepicker component that allows you to select a specific time
- */
+
 export default function TimePicker() {
   const [visible, setVisible] = React.useState(false);
   const [hours, setHours] = React.useState(1);
@@ -53,7 +51,7 @@ export default function TimePicker() {
 
   const selectedTime = `${hours.toLocaleString("de-CH", {
     /**
-     * @returns The time is gonna turn into a String with 2 digits for hours and minutes
+     * Turns the time into a String with 2 digits for hours and minutes
      * */
     minimumIntegerDigits: 2,
   })}:${minutes.toLocaleString("de-CH", {

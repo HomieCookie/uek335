@@ -6,11 +6,6 @@ import StorageService from "../services/StorageService";
 
 registerTranslation('de', de)
 
-/**
- * DatePicker component for picking a date.
- * 
- * @returns {JSX.Element}
- */
 export default function DatePicker() {
 
     const [date, setDate] = React.useState(new Date());
@@ -21,6 +16,9 @@ export default function DatePicker() {
             if (date) {
                 setDate(new Date(date));
             } else {
+                /**
+                 * If no date is stored, the date will be set to the last weekday of the month.
+                 */
                 do {
                     result = new Date(year, month, offset);
 
@@ -51,8 +49,6 @@ export default function DatePicker() {
      * Callback for date change in single mode.
      * 
      * @param {Date} params.date - The selected date.
-     * 
-     * @returns {void}
      */
     const onConfirmSingle = React.useCallback(
         (params: any) => {
