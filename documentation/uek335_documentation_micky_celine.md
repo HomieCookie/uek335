@@ -25,16 +25,15 @@ Unsere Aufgabe für dieses Projekt ist es, eine mobile Applikation zur Erinnerun
 
 #### Funktionale Anforderungen
 
-- Als ein Nutzer kann ich einen Tag, an der die Nachricht kommt, angeben
-- Als ein Nutzer kann ich die Zeit angeben, an welcher die Nachricht kommt
-- Als ein User kann ich einstellen, wie oft die Nachricht wiederholt
+- Als ein Nutzer kann ich den Tag, an dem die Nachricht kommt angeben, so dass wenn ich in den Ferien bin, ich die Fertigmeldung früher machen kann
+- Als ein Nutzer kann ich die Zeit angeben, an welcher die Nachricht kommt, damit ich sie in meiner Arbeitszeit bekomme
+- Als ein Nutzer kann ich einstellen, wie oft die Nachricht wiederholt wird, damit ich es nicht jeden Monat erneut definieren muss
 - Wenn ich als Nutzer kein Tag angegeben habe, bekomme ich die Erinnerung am letzten Arbeitstag im Monat
 
 #### Nicht-funktionale Anforderungen
 
-- Als ein User finde ich das UI ansprechend
-- Als ein User kann ich mich auf den Seiten zurechtfinden
-- Als Nutzer bekomme ich die Nachricht spätenstens nach 59 Sekunden
+- Als ein User finde ich das UI ansprechend, weil ich eine Angenehme User experience möchte
+- Als ein User kann ich mich auf den Seiten zurechtfinden, damit ich meine Aenderungen schnell machen kann
 
 ### **1.2** Ziele
 
