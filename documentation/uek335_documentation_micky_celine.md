@@ -71,7 +71,20 @@ Link für Figma: https://www.figma.com/file/K5UEwmhLbN4sTiERp3Dpyk/Mockup-Time-r
 
 ### **2.1** Infrastruktur
 
-In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurde nicht von uns getroffen, sondern war vorgeschrieben. Jedoch haben wir uns als Components Library für React Native Paper entschieden. Diese Library hat alle wichtige Komponente, welche wir für dieses Projekt brauchen. Die Mockups wurden mit Figma erstellt, da wir schon etwas erfahrung mit Figma hatten.
+In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurde nicht von uns getroffen, sondern war vorgeschrieben. Jedoch haben wir uns als Components Library für React Native Paper entschieden. Diese Library hat alle wichtige Komponente, welche wir für dieses Projekt brauchen. Die Mockups wurden mit Figma erstellt, da wir schon etwas erfahrung mit Figma hatten.  
+Für den Timepicker und Datepicker mussten wir noch zusätzlich react-native-paper-dates installieren.  
+Mit folgendem Befehl kann dass gfemacht werden:
+
+```bash
+$ npm install react-native-paper-dates --save
+```
+
+Und auch für das Routing nutzten wir ein paar Librarys. Die konnten wir ganz einfach mit folgenden Befehlen installieren:
+
+```bash
+$ npm i @react-navigation/native
+$ npm i @react-navigation/stack
+```
 
 ### Installation
 
