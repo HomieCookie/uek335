@@ -85,7 +85,11 @@ Da eine gute Code Dokumentation verlangt wird, wird user Code mit TSDocs komment
 
 ### Test Konzept
 
-Erklären, was genau gemacht wurde(os, blackbox test, component test)
+Testart: Whitebox testing
+
+Testen auf: Android 12
+
+
 
 ![Testing](./testing.png)
 
