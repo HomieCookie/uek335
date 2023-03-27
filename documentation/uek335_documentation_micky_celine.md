@@ -67,6 +67,20 @@ Link für Figma: https://www.figma.com/file/K5UEwmhLbN4sTiERp3Dpyk/Mockup-Time-r
 
 In unserem Projekt arbeiten wir mit React Native TS und Expo. Diese Auswahl wurde nicht von uns getroffen, sondern war vorgschrieben. Jedoch haben wir uns als Components Library für React Native Paper entschieden. Diese Library hat alle wichtigen Komponente, welche wir für dieses Projekt brauchen. Die Mockups wurden mit Figma erstellt, da wir schon etwas erfahrung mit Figma hattern.
 
+### Installation
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/en/)
+- emulator or device
+
+#### Run the project
+
+```bash
+$ npm i
+$ npm run android
+```
+
 ## **3.0** Umsetzung des projektes
 
 ---
