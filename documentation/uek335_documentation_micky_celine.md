@@ -43,7 +43,6 @@ Die User Stories sind fertig, wenn:
 - Der Nutzer die Zeit der Nachricht bestimmen kann
 - Der Nutzer die Wiederholungen definieren kann
 - Die Steuerelemente an den richtigen Stellen verwendet wurden
-- Der Nutzer die Nachricht innerhalb von 59 Sekunden nach dem definierten Datum und Zeitpunkt erhält
 - Als Standard Tag der letzte Arbeitstag im Monat genommen wird
 
 ## **2.0** Mockups und Design
@@ -107,9 +106,7 @@ Da eine gute Code Dokumentation verlangt wird, wird user Code mit TSDocs komment
 
 ### Test Konzept
 
-Testart: Whitebox testing
-
-Testen auf: Android 12
+Die Tests wurden alle manuell durchgeführt. Alle Tests wurden auf einer Android Umgebung getestet. Die Testgeräte sind einerseits für das Smartphone: Google Pixel 5 API 33 mit Android 13 für für die Laptops: Lenovo Thinkpad L13 Yoga mit Windows 10 und ein HP EliteBook 850 G8 mit einem Linux Mint 21 Cinnamon. Alle folgenden Tests sind Komponententests und sind dazu noch Whitebox Tests. 
 
 ![Testing](./testing.png)
 
