@@ -78,13 +78,6 @@ export default function TimePicker() {
 }
 
 const styles = StyleSheet.create({
-  component: {
-    backgroundColor: "#CAC4D0",
-  },
-  button: {
-    backgroundColor: "#CAC4D0",
-    borderColor: "",
-  },
   text: {
     fontSize: 35,
   },
