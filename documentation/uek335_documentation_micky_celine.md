@@ -29,6 +29,7 @@ Unsere Aufgabe für dieses Projekt ist es, eine mobile Applikation zur Erinnerun
 - Als ein Nutzer kann ich die Zeit angeben, an welcher die Nachricht kommt, damit ich sie in meiner Arbeitszeit bekomme
 - Als ein Nutzer kann ich einstellen, wie oft die Nachricht wiederholt wird, damit ich es nicht jeden Monat erneut definieren muss
 - Wenn ich als Nutzer kein Tag angegeben habe, bekomme ich die Erinnerung am letzten Arbeitstag im Monat
+- Wenn ich die App geschlossen habe, möchte ich als Nutzer, dass die Daten gespeichert wurden, damit ich sie nicht erneut eingeben muss.
 
 #### Nicht-funktionale Anforderungen
 
@@ -106,7 +107,7 @@ Da eine gute Code Dokumentation verlangt wird, wird user Code mit TSDocs komment
 
 ### Test Konzept
 
-Die Tests wurden alle manuell durchgeführt. Alle Tests wurden auf einer Android Umgebung getestet. Die Testgeräte sind einerseits für das Smartphone: Google Pixel 5 API 33 mit Android 13 für für die Laptops: Lenovo Thinkpad L13 Yoga mit Windows 10 und ein HP EliteBook 850 G8 mit einem Linux Mint 21 Cinnamon. Alle folgenden Tests sind Komponententests und sind dazu noch Whitebox Tests. 
+Die Tests wurden alle manuell durchgeführt. Alle Tests wurden auf einer Android Umgebung getestet. Die Testgeräte sind einerseits für das Smartphone: Google Pixel 5 API 33 mit Android 13 für für die Laptops: Lenovo Thinkpad L13 Yoga mit Windows 10 und ein HP EliteBook 850 G8 mit einem Linux Mint 21 Cinnamon. Alle folgenden Tests sind Komponententests und sind dazu noch Whitebox Tests.
 
 ![Testing](./testing.png)
 
